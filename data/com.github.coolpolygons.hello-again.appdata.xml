@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Jacob Kim <jpoly1219@gmail.com> -->
+<component type="desktop">
+  <id>com.github.coolpolygons.hello-again.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <name>Your App's Name</name>
+  <summary>A Catchy Tagline</summary>
+  <description>
+    <p>I followed the tutorial in the getting started page.</p>
+  </description>
+</component>
+  <custom>
+     <value key="x-appcenter-color-primary">#603461</value>
+     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+     <value key="x-appcenter-suggested-price">5</value>
+  </custom>
