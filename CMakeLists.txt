@@ -13,6 +13,8 @@ set (DATADIR "${CMAKE_INSTALL_PREFIX}/share")
 
 # what to call that directory where we install data too
 set (PKGDATADIR "${DATADIR}/com.github.coolpolygons.hello-again")
+
+set (EXEC_NAME "com.github.coolpolygons.hello-again")
 set (RELEASE_NAME "A hello world.")
 set (VERSION "0.1")
 set (VERSION_INFO "whats up world")
@@ -54,4 +56,9 @@ install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.coolpolygons.hello-again.desktop DESTINATION ${DATADIR}/applications/)
 
 # install our .appdata.xml file so AppCenter will see it
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com/github.coolpolygons.hello-again.appdata.xml DESTINATION ${DATADIR}/metainfo/)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.coolpolygons.hello-again.appdata.xml DESTINATION ${DATADIR}/metainfo/)
+
+# Translation files
+set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}")
+add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
+add_subdirectory (po)
